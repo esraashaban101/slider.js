@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.slider-container {
+    width: 800px;
+    height: 250px;
+    position: relative;
+    margin: 10px auto;
+
+}
+
+.slider-container img {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s;
+
+    width: 800px;
+    height: 250px;
+
+}
+
+.slider-container img.active {
+    opacity: 1;
+}
+
+.slider-num {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 4px;
+    color: white;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.slider-controls {
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider-controls .prev,
+.slider-controls .next {
+    background-color: rgb(0, 150, 136);
+    color: white;
+    border-radius: 5px;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.slider-controls .prev {
+    float: left;
+
+}
+
+.slider-controls .next {
+    float: right;
+
+}
+
+.slider-controls .next.disabled,
+.slider-controls .prev.disabled {
+    background-color: rgb(0, 150, 136, 0.5);
+    cursor: no-drop;
+}
+
+.indicators {
+    width: 60%;
+    float: left;
+
+
+}
+
+.indicators ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+
+}
+
+.indicators ul li {
+    display: inline-block;
+    background-color: #f6f6f6;
+    font-weight: bold;
+    height: 28px;
+    width: 28px;
+    border-radius: 4px;
+    margin: 0 2px;
+    line-height: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+.slider-controls .indicators ul li.active {
+    background-color: rgb(0, 150, 136);
+    color: white;
+}
